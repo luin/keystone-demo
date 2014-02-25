@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FFF url(/images/bg.png) left top repeat;
+  background-size: 320px 568px;
+  font-family: 'Muli', sans-serif;
+}
+
+header {
+  height: 100px;
+  color: #FFF;
+}
+
+h1 {
+  margin: 0;
+  padding: 42px 0 0 15px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+h5 {
+  margin: 0;
+  padding: 0 0 0 15px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.post {
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+h2 {
+  color: #725a3e;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 16px 0 10px;
+}
+
+p {
+  margin: 0;
+}
+
+img.full-width {
+  position: relative;
+  left: -5px;
+  display: block;
+  margin: 0 auto;
+  width: 98%;
+  height: auto;
+}
