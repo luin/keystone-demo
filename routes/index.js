@@ -16,7 +16,7 @@ keystone.pre('routes', function(req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Blog', key: 'blog', href: '/blog' },
 		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' }
+		{ label: 'Contact', key: 'contact', href: '/contact' },
 	];
 	
 	res.locals.user = req.user;
@@ -48,7 +48,8 @@ keystone.set('404', function(req, res, next) {
 var routes = {
 	//api: importRoutes('./api'),
 	download: importRoutes('./download'),
-	views: importRoutes('./views')
+	views: importRoutes('./views'),
+	api: importRoutes('./api')
 };
 
 exports = module.exports = function(app) {
@@ -64,6 +65,8 @@ exports = module.exports = function(app) {
 	app.get('/download/users', routes.download.users);
 	
 	// API
-	//app.all('/api*', keystone.initAPI);
-
+	// app.all('/api*', keystone.initAPI);
+	app.get('/api/users', routes.api.users);
+	app.get('/api/categories', routes.api.categories);
+	app.get('/api/posts/:category?', routes.api.posts);
 }
